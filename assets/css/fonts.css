@@ -7,3 +7,13 @@
     font-family: 'GameCube';
     src: url('../fonts/GameCube.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'PhatBoySlim';
+    src: url('../fonts/PhatBoySlim.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Homoarak';
+    src: url('../fonts/Homoarak.ttf') format('truetype');
+}
