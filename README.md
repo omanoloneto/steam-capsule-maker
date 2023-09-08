@@ -33,6 +33,7 @@ The Steam Cover Maker allows users to fully personalize their game covers with a
 
 Explore some of the fantastic covers created using the Steam Cover Maker. You can find some examples below that demonstrate the versatility and personalization possibilities of this tool:
 
+<div style="display: flex; justify-content: space-around;">
 <img src="assets/img/prints/pc_game_cover_1.jpg" width="150px" alt="PC Game Cover 1" />
 <img src="assets/img/prints/pc_game_cover_2.jpg" width="150px" alt="PC Game Cover 2" />
 <img src="assets/img/prints/gba_game_cover_1.jpg" width="150px" alt="GBA Game Cover 1" />
@@ -42,6 +43,7 @@ Explore some of the fantastic covers created using the Steam Cover Maker. You ca
 <img src="assets/img/prints/ps2_game_cover_1.jpg" width="150px" alt="PS2 Game Cover 1" />
 <img src="assets/img/prints/ps3_game_cover_1.jpg" width="150px" alt="PS3 Game Cover 1" />
 <img src="assets/img/prints/ps3_game_cover_2.jpg" width="150px" alt="PS3 Game Cover 2" />
+</div>
 
 Feel free to explore more and create your unique game covers!
 
