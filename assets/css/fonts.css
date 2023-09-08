@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'EmotionEngine';
+    src: url('../fonts/EmotionEngine.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GameCube';
+    src: url('../fonts/GameCube.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PhatBoySlim';
+    src: url('../fonts/PhatBoySlim.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Homoarak';
+    src: url('../fonts/Homoarak.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('../fonts/HelveticaBold.ttf') format('truetype');
+}
