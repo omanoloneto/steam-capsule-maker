@@ -27,6 +27,42 @@
         <h2>Select your label style</h2>
 
         <div class="toggle-container menu-item">
+            <label for="labelToggle-pc-classic">PC Classic Style
+                <div class="switch">
+                    <input type="checkbox" id="labelToggle-pc-classic">
+                    <span class="slider"></span>
+                </div>
+            </label>
+        </div>
+
+        <div class="toggle-container menu-item">
+            <label for="labelToggle-pc-modern">PC Modern Style
+                <div class="switch">
+                    <input type="checkbox" id="labelToggle-pc-modern">
+                    <span class="slider"></span>
+                </div>
+            </label>
+        </div>
+
+        <div class="toggle-container menu-item">
+            <label for="labelToggle-gba-classic">GBA Classic Style
+                <div class="switch">
+                    <input type="checkbox" id="labelToggle-gba-classic">
+                    <span class="slider"></span>
+                </div>
+            </label>
+        </div>
+
+        <div class="toggle-container menu-item">
+            <label for="labelToggle-gba-modern">GBA Modern Style
+                <div class="switch">
+                    <input type="checkbox" id="labelToggle-gba-modern">
+                    <span class="slider"></span>
+                </div>
+            </label>
+        </div>
+
+        <div class="toggle-container menu-item">
             <label for="labelToggle-ps1-classic">PS1 Classic Style
                 <div class="switch">
                     <input type="checkbox" id="labelToggle-ps1-classic">
@@ -71,15 +107,6 @@
             </label>
         </div>
 
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-gba">GBA Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-gba">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
         <div class="input-container menu-item">
             <input type="text" id="customTextLabel" value="SteamStation 2" />
         </div>
@@ -93,7 +120,9 @@
         <input type="file" id="imageUpload" accept="image/*" />
         <div class="preview-border">
             <div class="preview-window">
-                <div class="top-bar" id="topBar"></div>
+                <div class="top-bar" id="topBar">
+                    <!--The label text will showed here-->
+                </div>
                 <div class="preview-container">
                     <!--The image will showed here-->
                 </div>

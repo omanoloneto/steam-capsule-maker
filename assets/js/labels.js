@@ -5,7 +5,10 @@ const labelsInfo = [
     { id: 'labelToggle-ps2', class: 'ps2', text: 'SteamStation 2' },
     { id: 'labelToggle-ps3-classic', class: 'ps3-classic', text: 'SteamStation 3' },
     { id: 'labelToggle-ps3-modern', class: 'ps3-modern', text: 'SS3' },
-    { id: 'labelToggle-gba', class: 'gba', text: 'steam ADVANCE' },
+    { id: 'labelToggle-gba-classic', class: 'gba-classic', text: 'steam ADVANCE' },
+    { id: 'labelToggle-gba-modern', class: 'gba-modern', text: 'steam ADVANCE' },
+    { id: 'labelToggle-pc-classic', class: 'pc-classic', text: 'PC steam' },
+    { id: 'labelToggle-pc-modern', class: 'pc-modern', text: 'Games for Steam' },
 ];
 
 function setupToggles(labelsInfo) {
@@ -41,5 +44,8 @@ function setupToggles(labelsInfo) {
 setupToggles(labelsInfo);
 
 document.getElementById('customTextLabel').addEventListener('input', function () {
-    document.getElementById('topBar').textContent = this.value;
+    let lines = this.value.split('\n');
+    
+    document.querySelector('.top-bar .linef').textContent = lines[0] || '';
+    document.querySelector('.top-bar .lines').textContent = lines[1] || '';
 });

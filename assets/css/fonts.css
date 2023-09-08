@@ -17,3 +17,8 @@
     font-family: 'Homoarak';
     src: url('../fonts/Homoarak.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('../fonts/HelveticaBold.ttf') format('truetype');
+}
