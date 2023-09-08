@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'EmotionEngine';
+    src: url('../fonts/EmotionEngine.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GameCube';
+    src: url('../fonts/GameCube.ttf') format('truetype');
+}

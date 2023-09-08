@@ -1,0 +1,34 @@
+.gba {
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 70px;
+    background: linear-gradient(to right, #7d8790, #f8f7f9);
+    color: #FFF;
+    text-align: center;
+    visibility: hidden;
+    font-size: 22px;
+    line-height: 60px;
+    letter-spacing: -4px;
+    font-family: 'GameCube', sans-serif;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.ps2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-size: 26px;
+    visibility: hidden;
+    padding: 16px;
+    font-family: 'EmotionEngine', sans-serif;
+    border-bottom: 2px solid white;
+}
