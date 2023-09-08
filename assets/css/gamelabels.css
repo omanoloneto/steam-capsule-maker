@@ -17,7 +17,30 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.ps1 {
+.ps1-classic {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 450px;
+    height: 35px;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    word-spacing: -10px;
+    visibility: visible;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    font-family: 'EmotionEngine', sans-serif;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+} 
+
+.ps1-modern {
     position: absolute;
     top: 0;
     left: 0;

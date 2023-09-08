@@ -1,6 +1,7 @@
 // just add a new item in that array to add a new label
 const labelsInfo = [
-    { id: 'labelToggle-ps1', class: 'ps1', text: 'SteamStation' },
+    { id: 'labelToggle-ps1-classic', class: 'ps1-classic', text: 'SteamStation' },
+    { id: 'labelToggle-ps1-modern', class: 'ps1-modern', text: 'SteamStation' },
     { id: 'labelToggle-ps2', class: 'ps2', text: 'SteamStation 2' },
     { id: 'labelToggle-gba', class: 'gba', text: 'steam ADVANCE' },
 ];
