@@ -4,7 +4,8 @@ body {
     color: #c7d5e0;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-left: 20px;
     text-align: left;
 }
@@ -114,7 +115,8 @@ label {
     font-family: 'Arial', sans-serif;
 }
 
-.toggle-container, .menu-item {
+.toggle-container,
+.menu-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -226,4 +228,22 @@ input:checked+.slider:before {
 
 .top-bar {
     visibility: hidden;
+}
+
+.created-by {
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.created-by a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.created-by a:hover {
+    text-decoration: underline;
 }

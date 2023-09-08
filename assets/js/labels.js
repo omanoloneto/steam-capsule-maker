@@ -1,7 +1,7 @@
 // just add a new item in that array to add a new label
 const labelsInfo = [
-    {id: 'labelToggle-ps2', class: 'ps2', text: 'SteamStation 2'},
-    {id: 'labelToggle-gba', class: 'gba', text: 'steam ADVANCE'},
+    { id: 'labelToggle-ps2', class: 'ps2', text: 'SteamStation 2' },
+    { id: 'labelToggle-gba', class: 'gba', text: 'steam ADVANCE' },
 ];
 
 function setupToggles(labelsInfo) {
