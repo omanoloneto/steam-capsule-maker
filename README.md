@@ -47,7 +47,7 @@ Feel free to explore more and create your unique game covers!
 
 ## Get Started
 
-To start using the project, you can simply visit [my website](http://realafonso.com/steam-cover-maker) to use the product directly from your web browser. It is designed to be user-friendly, making it easy for you to create the perfect steam cover!
+To start using the project, you can simply visit [my website](http://realafonso.com/steam-cover-maker/) to use the product directly from your web browser. It is designed to be user-friendly, making it easy for you to create the perfect steam cover!
 
 If you wish to contribute to the project, please see the section below.
 
