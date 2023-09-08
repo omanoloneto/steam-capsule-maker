@@ -133,9 +133,10 @@ label {
     padding-left: 20px;
     padding-right: 20px;
     width: 90%;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: 2px;
+    margin-bottom: 2px;
     gap: 5px;
+    font-size: 14px;
 }
 
 .menu-item label {
@@ -183,8 +184,8 @@ label {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 28px;
+    width: 45px;
+    height: 20px;
     margin-left: 20px;
 }
 
@@ -202,15 +203,15 @@ label {
     right: 0;
     bottom: 0;
     background-color: #626567;
-    transition: .4s;
+    transition: .2s;
     border-radius: 34px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
+    height: 12px;
+    width: 12px;
     left: 4px;
     bottom: 4px;
     background-color: #D2E885;
@@ -223,7 +224,7 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-    transform: translateX(32px);
+    transform: translateX(25px);
 }
 
 .top-bar {

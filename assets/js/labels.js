@@ -4,6 +4,7 @@ const labelsInfo = [
     { id: 'labelToggle-ps1-modern', class: 'ps1-modern', text: 'SteamStation' },
     { id: 'labelToggle-ps2', class: 'ps2', text: 'SteamStation 2' },
     { id: 'labelToggle-ps3-classic', class: 'ps3-classic', text: 'SteamStation 3' },
+    { id: 'labelToggle-ps3-modern', class: 'ps3-modern', text: 'SS3' },
     { id: 'labelToggle-gba', class: 'gba', text: 'steam ADVANCE' },
 ];
 
