@@ -20,6 +20,14 @@
     border-right: 2px solid #86827a;
 }
 
+.pc-classic-lines {
+    font-size: 16px;
+}
+
+.pc-classic .single-line {
+    font-size: 22px;
+}
+
 .pc-modern {
     position: absolute;
     top: 0px;
@@ -47,6 +55,27 @@
     background: linear-gradient(to right, #7eb5d5, #244869, #7eb5d5);
 }
 
+.pc-modern-linef {
+    display: block;
+    color: #4a88c6;
+    line-height: 15px;
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pc-modern-lines {
+    display: block;
+    margin-top: -10px;
+    font-size: 19px;
+}
+
+.pc-modern .single-line {
+    line-height: 35px;
+    font-size: 22px;
+    margin-top: 0px;
+}
+
 .gba-classic {
     position: absolute;
     bottom: -25%;
@@ -55,10 +84,12 @@
     height: 70px;
     background: linear-gradient(to right, #7d8790, #f8f7f9);
     color: #FFF;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     visibility: hidden;
     font-size: 24px;
-    line-height: 60px;
     letter-spacing: -4px;
     font-family: 'GameCube', sans-serif;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
@@ -69,6 +100,32 @@
     transform-origin: top left;
 }
 
+.gba-modern-linef,
+.gba-modern-lines,
+.gba-classic-linef, 
+.gba-classic-lines {
+    text-align: center;
+}
+
+.gba-modern-linef
+.gba-classic-linef {
+    font-size: 24px;
+}
+
+.gba-modern-lines,
+.gba-classic-lines {
+    font-size: 18px;
+    color: #050505;
+    padding-left: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.gba-modern .single-line,
+.gba-classic .single-line {
+    font-size: 24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
 .gba-modern {
     position: absolute;
     top: 0;
@@ -76,6 +133,10 @@
     height: 70px;
     background: linear-gradient(to right, #7d8790, #f8f7f9);
     color: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     visibility: hidden;
     font-size: 22px;
@@ -109,7 +170,7 @@
     font-family: 'EmotionEngine', sans-serif;
     transform: rotate(-90deg);
     transform-origin: top left;
-} 
+}
 
 .ps1-modern {
     position: absolute;
@@ -160,7 +221,7 @@
     width: 450px;
     height: 35px;
     line-height: 42px;
-    background: linear-gradient(to right, #000000, #657989);
+    background: linear-gradient(to right, #000000, #657989, #000000, #657989, #000000, #657989);
     color: #c0c5cc;
     text-align: center;
     font-size: 28px;
@@ -175,7 +236,7 @@
     transform: rotate(-90deg);
     transform-origin: top left;
     border-bottom: 1px solid #535459;
-} 
+}
 
 .ps3-modern {
     position: absolute;
@@ -184,7 +245,7 @@
     width: 100%;
     height: 35px;
     line-height: 42px;
-    background: linear-gradient(to right, #000000, #657989);
+    background: linear-gradient(to right, #000000, #000000, #657989);
     color: #c0c5cc;
     text-align: left;
     font-size: 22px;
@@ -197,4 +258,4 @@
     padding-bottom: 2px;
     font-family: 'PhatBoySlim', sans-serif;
     border-bottom: 1px solid #991f34;
-} 
+}
