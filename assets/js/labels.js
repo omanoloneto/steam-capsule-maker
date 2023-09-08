@@ -35,3 +35,7 @@ function setupToggles(labelsInfo) {
 }
 
 setupToggles(labelsInfo);
+
+document.getElementById('customTextLabel').addEventListener('input', function () {
+    document.getElementById('topBar').textContent = this.value;
+});

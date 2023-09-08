@@ -228,6 +228,7 @@ input:checked+.slider:before {
 
 .top-bar {
     visibility: hidden;
+    z-index: 69;
 }
 
 .created-by {

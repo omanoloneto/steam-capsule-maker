@@ -31,9 +31,12 @@ function loadImage(event) {
             img.onload = function () {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
+                const aspectRatio = img.width / img.height;
+
                 canvas.width = 300;
-                canvas.height = 450;
-                ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 300, 450);
+                canvas.height = 300 / aspectRatio;
+
+                ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 300, 300 / aspectRatio);
                 document.querySelector(selectors.previewContainer).innerHTML = '';
                 document.querySelector(selectors.previewContainer).appendChild(canvas);
             }
@@ -63,10 +66,15 @@ function dragImage(event) {
             const deltaX = (event.clientX - state.previousMousePosition.x) * state.zoomLevel;
             const deltaY = (event.clientY - state.previousMousePosition.y) * state.zoomLevel;
 
-            state.offsetX -= deltaX;
-            state.offsetY -= deltaY;
+            const canvas = document.querySelector(`${selectors.previewWindow} canvas`);
+            if (canvas) {
+                canvas.style.position = 'relative';
+                canvas.style.top = `${state.offsetY}px`;
+                canvas.style.left = `${state.offsetX}px`;
 
-            applyZoom(state.zoomLevel);
+                state.offsetX += deltaX;
+                state.offsetY += deltaY;
+            }
 
             state.previousMousePosition = { x: event.clientX, y: event.clientY };
         });
@@ -81,10 +89,17 @@ function applyZoom(level) {
     const canvas = document.querySelector(`${selectors.previewWindow} canvas`);
     if (canvas) {
         const ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        canvas.width = 300;
-        canvas.height = 450;
-        ctx.drawImage(img, state.offsetX, state.offsetY, img.width / level, img.height / level, 0, 0, 300, 450);
+        const aspectRatio = img.width / img.height;
+
+        const newWidth = 300 * level;
+        const newHeight = (300 / aspectRatio) * level;
+
+        canvas.width = newWidth;
+        canvas.height = newHeight;
+
+        ctx.clearRect(0, 0, newWidth, newHeight);
+
+        ctx.drawImage(img, state.offsetX, state.offsetY, img.width, img.height, 0, 0, newWidth, newHeight);
     }
 }
 
