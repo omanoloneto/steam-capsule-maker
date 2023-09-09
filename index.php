@@ -1,3 +1,11 @@
+<?php
+
+header("Access-Control-Allow-Origin: *");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -17,8 +25,6 @@
 
     <title>Steam Cover Maker</title>
 </head>
-
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 <body>
     <div class="sidebar">
@@ -119,7 +125,7 @@
     <div class="container">
         <input type="file" id="imageUpload" accept="image/*" />
         <div class="preview-border">
-            <div class="preview-window">
+            <div class="preview-window" id="preview-window">
                 <div class="top-bar" id="topBar">
                     <span id="linef"></span>
                     <span id="lines"></span>
@@ -136,9 +142,9 @@
         </div>
     </div>
 
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="assets/js/events.js"></script>
-    <script src="assets/js/labels.js"></script>
+    <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="assets/js/events.js?v=<?=date('YmdHis')?>"></script>
+    <script src="assets/js/labels.js?v=<?=date('YmdHis')?>"></script>
 
 </body>
 
