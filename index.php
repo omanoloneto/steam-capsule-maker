@@ -17,9 +17,9 @@ header("Pragma: no-cache");
     <meta name="description"
         content="Create custom covers for your Steam games with Steam Cover Maker. Choose varied styles and easily download your creation.">
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/gamelabels.css">
+    <link rel="stylesheet" href="assets/css/fonts.css?v=<?=date('YmdHis')?>">
+    <link rel="stylesheet" href="assets/css/components.css?v=<?=date('YmdHis')?>">
+    <link rel="stylesheet" href="assets/css/labels.css?v=<?=date('YmdHis')?>">
 
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
@@ -32,90 +32,7 @@ header("Pragma: no-cache");
 
         <h2>Select your label style</h2>
 
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-pc-classic">PC Classic Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-pc-classic">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-pc-modern">PC Modern Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-pc-modern">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-gba-classic">GBA Classic Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-gba-classic">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-gba-modern">GBA Modern Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-gba-modern">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-ps1-classic">PS1 Classic Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-ps1-classic">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-ps1-modern">PS1 Modern Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-ps1-modern">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-ps2">PS2 Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-ps2">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-ps3-classic">PS3 Classic Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-ps3-classic">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="toggle-container menu-item">
-            <label for="labelToggle-ps3-modern">PS3 Modern Style
-                <div class="switch">
-                    <input type="checkbox" id="labelToggle-ps3-modern">
-                    <span class="slider"></span>
-                </div>
-            </label>
-        </div>
-
-        <div class="input-container menu-item">
-            <input type="text" id="customTextLabel" value="SteamStation 2" />
-        </div>
+        <div id="consoleOptions"></div>
 
         <div class="created-by">
             Created by <a href="https://twitter.com/realAfonso" target="_blank"
@@ -141,8 +58,20 @@ header("Pragma: no-cache");
             <button id="downloadButton">Download</button>
         </div>
     </div>
+    <div class="sidebar-right" id="sidebarRight">
+        <div class="style-options" id="styleOptions">
+            <h1>Style Options</h1>
+
+            <div class="input-container menu-item">
+                <input type="text" id="customTextLabel" value="Your label here!" disabled />
+            </div>
+
+            
+        </div>
+    </div>
 
     <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+    <script src="assets/js/consoles.js?v=<?=date('YmdHis')?>"></script>
     <script src="assets/js/events.js?v=<?=date('YmdHis')?>"></script>
     <script src="assets/js/labels.js?v=<?=date('YmdHis')?>"></script>
 

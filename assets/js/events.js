@@ -103,15 +103,15 @@ function applyZoom(level) {
     }
 }
 
-function downloadImage() { 
+function downloadImage() {
     const previewContainer = document.querySelector(selectors.previewWindow);
     const currentWidth = previewContainer.offsetWidth;
     const currentHeight = previewContainer.offsetHeight;
 
-    htmlToImage.toJpeg(previewContainer, { 
-        quality: 0.92, 
-        canvasWidth: currentWidth * 2, 
-        canvasHeight: currentHeight * 2 
+    htmlToImage.toJpeg(previewContainer, {
+        quality: 0.92,
+        canvasWidth: currentWidth * 2,
+        canvasHeight: currentHeight * 2
     }).then(function (dataUrl) {
         const link = document.createElement('a');
         link.href = dataUrl;
@@ -123,6 +123,7 @@ function downloadImage() {
         link.click();
     });
 }
+
 
 document.querySelector(selectors.imageUpload).addEventListener('change', loadImage);
 document.querySelector(selectors.zoomInButton).addEventListener('click', zoomIn);
