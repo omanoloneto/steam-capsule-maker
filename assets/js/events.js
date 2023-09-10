@@ -124,6 +124,41 @@ function downloadImage() {
     });
 }
 
+document.querySelector('.toggle-left').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelectorAll('.sidebar').forEach(function (sidebar) {
+        if (sidebar.classList.contains('visible')) {
+            sidebar.classList.remove('visible');
+        } else {
+            sidebar.classList.add('visible');
+        }
+    });
+    document.querySelector('.sidebar-right').classList.remove('visible');
+});
+
+document.querySelector('.toggle-right').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelectorAll('.sidebar-right').forEach(function (sidebar) {
+        if (sidebar.classList.contains('visible')) {
+            sidebar.classList.remove('visible');
+        } else {
+            sidebar.classList.add('visible');
+        }
+    });
+    document.querySelector('.sidebar').classList.remove('visible');
+});
+
+document.addEventListener('click', function (e) {
+    var sideright = document.querySelector('.sidebar-right');
+    var sidebar = document.querySelector('.sidebar');
+    var btnToggle = document.querySelector('.btn-toggle');
+
+    if (!sideright.contains(e.target) && !sidebar.contains(e.target) && !btnToggle.contains(e.target)) {
+        document.querySelector('.sidebar').classList.remove('visible');
+        document.querySelector('.sidebar-right').classList.remove('visible');
+    }
+});
+
 
 document.querySelector(selectors.imageUpload).addEventListener('change', loadImage);
 document.querySelector(selectors.zoomInButton).addEventListener('click', zoomIn);

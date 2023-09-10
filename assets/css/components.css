@@ -265,13 +265,12 @@ input:checked+.slider:before {
 }
 
 .sidebar-right .menu-item .text {
-    width: auto;
     margin-left: 15px;
 }
 
 .sidebar-right .menu-item label {
     display: flex;
-    width: 50%;
+    justify-content: unset;
 }
 
 .sidebar-right label div.switch {
@@ -289,4 +288,19 @@ input:checked+.slider:before {
     padding: 20px;
     font-family: 'Arial', sans-serif;
     display: block;
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #FFF; 
+    align-self: flex-start;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.btn-toggle:focus {
+    outline: none;
 }

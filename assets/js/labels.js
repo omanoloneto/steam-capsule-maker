@@ -131,6 +131,11 @@ function addListeners() {
         document.getElementById('labelToggle-' + console.indicator + '-options').addEventListener('change', function () {
             disableOtherOptions(console);
             enableConsoleOptions(console);
+
+            if (window.innerWidth <= 768 && this.checked) {
+                document.querySelector('.sidebar').classList.remove('visible');
+                document.querySelector('.sidebar-right').classList.add('visible');
+            }
         });
     });
 
@@ -138,6 +143,10 @@ function addListeners() {
         document.getElementById('labelToggle-' + label.class).addEventListener('change', function () {
             disableOtherLabels(label);
             displayLabel(label, this.checked);
+
+            if (window.innerWidth <= 768 && this.checked) {
+                document.querySelector('.sidebar-right').classList.remove('visible');
+            }
         });
     });
 }
