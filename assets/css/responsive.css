@@ -11,6 +11,7 @@
     #imageUpload {
         display: flex;
         vertical-align: middle;
+        width: 200px;
     }
 
     .sidebar,

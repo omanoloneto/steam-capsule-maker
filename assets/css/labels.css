@@ -34,7 +34,7 @@
     left: 0px;
     width: 100%;
     height: 50px;
-    background: linear-gradient(to bottom, #ece8ea, #f1eef8);
+    background: linear-gradient(to bottom, #f1eef8, #ded9db, #f1eef8, #f1eef8);
     color: #010101;
     text-align: left;
     visibility: visible;
@@ -43,6 +43,27 @@
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Arial', sans-serif;
+}
+
+.top-bar.pc-modern {
+    display: flex;
+    align-items: center;
+}
+
+.pc-modern .text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+
+.pc-modern #logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    background-image: url(../img/logos/steam-7.png);
+    background-size: contain;
 }
 
 .pc-modern::after {
@@ -70,10 +91,15 @@
     font-size: 19px;
 }
 
-.pc-modern .single-line {
+.pc-modern-linef.single-line {
     line-height: 35px;
     font-size: 22px;
     margin-top: 0px;
+}
+
+.pc-modern-lines.single-line {
+    margin-top: -3px;
+    font-size: 20px;
 }
 
 .gba-classic {

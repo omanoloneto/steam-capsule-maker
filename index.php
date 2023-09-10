@@ -61,8 +61,11 @@ header("Pragma: no-cache");
         <div class="preview-border">
             <div class="preview-window" id="preview-window">
                 <div class="top-bar" id="topBar">
-                    <span id="linef"></span>
-                    <span id="lines"></span>
+                    <div id="logo"></div>
+                    <div class="text-container">
+                        <span id="linef"></span>
+                        <span id="lines"></span>
+                    </div>
                 </div>
                 <div class="preview-container">
                     <!--The image will showed here-->

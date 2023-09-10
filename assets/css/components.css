@@ -273,6 +273,10 @@ input:checked+.slider:before {
     justify-content: unset;
 }
 
+#logo {
+    display: none;
+}
+
 .sidebar-right label div.switch {
     margin-left: 0px;
 }
