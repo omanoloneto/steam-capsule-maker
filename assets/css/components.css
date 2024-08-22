@@ -32,6 +32,10 @@ label {
     justify-content: space-between;
 }
 
+.hidden {
+    display: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -160,9 +164,9 @@ label {
 }
 
 .input-container {
-    display: none;
+    display: block !important;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .input-container label {
@@ -177,8 +181,12 @@ label {
     border-radius: 4px;
     background-color: #1b2838;
     color: #c7d5e0;
-    width: 100%;
+    width: 95%;
     font-size: 14px;
+}
+
+.input-container input:disabled {
+    opacity: 0.5;
 }
 
 .switch {
@@ -248,4 +256,55 @@ input:checked+.slider:before {
 
 .created-by a:hover {
     text-decoration: underline;
+}
+
+.sidebar-right .menu-item {
+    width: 100%;
+    margin-left: -10px;
+    display: none;
+}
+
+.sidebar-right .menu-item .text {
+    margin-left: 15px;
+}
+
+.sidebar-right .menu-item label {
+    display: flex;
+    justify-content: unset;
+}
+
+#logo {
+    display: none;
+}
+
+.sidebar-right label div.switch {
+    margin-left: 0px;
+}
+
+.sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #171a21;
+    color: #c1c1c1;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    display: block;
+}
+
+.btn-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #FFF; 
+    align-self: flex-start;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.btn-toggle:focus {
+    outline: none;
 }

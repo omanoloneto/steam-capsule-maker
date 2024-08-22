@@ -105,14 +105,16 @@ function applyZoom(level) {
 
 function downloadImage() {
     const previewContainer = document.querySelector(selectors.previewWindow);
+    const currentWidth = previewContainer.offsetWidth;
+    const currentHeight = previewContainer.offsetHeight;
 
-    html2canvas(previewContainer, {
-        scale: 2,
-        logging: true,
-        useCORS: true,
-    }).then(canvas => {
+    htmlToImage.toJpeg(previewContainer, {
+        quality: 0.92,
+        canvasWidth: currentWidth * 2,
+        canvasHeight: currentHeight * 2
+    }).then(function (dataUrl) {
         const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/jpeg', 0.92);
+        link.href = dataUrl;
 
         const timestamp = new Date();
         const formattedTime = `${timestamp.getFullYear()}${String(timestamp.getMonth() + 1).padStart(2, '0')}${String(timestamp.getDate()).padStart(2, '0')}${String(timestamp.getHours()).padStart(2, '0')}${String(timestamp.getMinutes()).padStart(2, '0')}${String(timestamp.getSeconds()).padStart(2, '0')}`;
@@ -121,6 +123,42 @@ function downloadImage() {
         link.click();
     });
 }
+
+document.querySelector('.toggle-left').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelectorAll('.sidebar').forEach(function (sidebar) {
+        if (sidebar.classList.contains('visible')) {
+            sidebar.classList.remove('visible');
+        } else {
+            sidebar.classList.add('visible');
+        }
+    });
+    document.querySelector('.sidebar-right').classList.remove('visible');
+});
+
+document.querySelector('.toggle-right').addEventListener('click', function (e) {
+    e.stopPropagation();
+    document.querySelectorAll('.sidebar-right').forEach(function (sidebar) {
+        if (sidebar.classList.contains('visible')) {
+            sidebar.classList.remove('visible');
+        } else {
+            sidebar.classList.add('visible');
+        }
+    });
+    document.querySelector('.sidebar').classList.remove('visible');
+});
+
+document.addEventListener('click', function (e) {
+    var sideright = document.querySelector('.sidebar-right');
+    var sidebar = document.querySelector('.sidebar');
+    var btnToggle = document.querySelector('.btn-toggle');
+
+    if (!sideright.contains(e.target) && !sidebar.contains(e.target) && !btnToggle.contains(e.target)) {
+        document.querySelector('.sidebar').classList.remove('visible');
+        document.querySelector('.sidebar-right').classList.remove('visible');
+    }
+});
+
 
 document.querySelector(selectors.imageUpload).addEventListener('change', loadImage);
 document.querySelector(selectors.zoomInButton).addEventListener('click', zoomIn);
